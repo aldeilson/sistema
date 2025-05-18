@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/imagens/stars.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container{
+  font-size: 10px;
+  width: 40em;
+  height: 40em;
+  position: relative;
+}
+
+.sun {
+  position: absolute;
+  top: 15em;
+  left: 15em;
+  width: 10em;
+  height: 10em;
+  background-color: #f1e8c2;
+  border-radius: 50%;
+  box-shadow: 0 0 3em white;
+}
+
+.mercury, .venus, .earth, .moon {
+  position: absolute;
+  border-style: solid;
+  border-color: rgb(182, 181, 140) transparent transparent transparent;
+  border-width: 0.2em 0.1em 0 0;
+  border-radius: 50%;
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mercury {
+  top: 12.5em;
+  left: 12.5em;
+  width: 15em;
+  height: 15em;
+  animation: orbit 7s linear infinite;
+}
+
+.venus {
+  top: 9em;
+  left: 9em;
+  width: 22em;
+  height: 22em;
+  animation: orbit 9s linear infinite;
+}
+
+.earth {
+  top: 2em;
+  left: 2em;
+  width: 36em;
+  height: 36em;
+  animation: orbit 15s linear infinite;
+}
+
+.moon {
+  top: 1.5em;
+  right: 1em;
+  width: 8em;
+  height: 8em;
+  animation: orbit 7s linear infinite;
+}
+
+
+.mercury::before, .venus::before, .earth::before, .moon::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.mercury::before {
+  top: 1em;
+  right: 1em;
+  width: 2em;
+  height: 2em;
+  background-color: #b5b58c;
+}
+
+.venus::before {
+  top: 1em;
+  right: 2em;
+  width: 3em;
+  height: 3em;
+  background-color: #ddd2a0;
+}
+
+.earth::before {
+  top: 4em;
+  right: 3.5em;
+  width: 3em;
+  height: 3em;
+  background-color: aqua;
+}
+
+.moon::before {
+  top: 0.8em;
+  right: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  background-color: silver;
+} 
