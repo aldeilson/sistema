@@ -9,7 +9,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(./imagens/stars.jpg);
+  background: url(./imagens/stars.jpg);
   background-size: cover;
   overflow: hidden;
 }
