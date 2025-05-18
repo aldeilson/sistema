@@ -36,7 +36,7 @@ body{
   position: absolute;
   border-style: solid;
   border-color: rgb(182, 181, 140) transparent transparent transparent;
-  border-width: 0.2em 0.1em 0 0;
+  border-width: 0.2em 0.2em 0 0;
   border-radius: 50%;
 }
 
